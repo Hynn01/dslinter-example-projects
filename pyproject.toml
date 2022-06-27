@@ -1,0 +1,59 @@
+[tool.black]
+line-length = 120
+target-version = ['py36', 'py37', 'py38']
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | scripts
+)/
+'''
+
+[tool.isort]
+skip = 'scripts'
+
+[tool.poetry]
+name = "dslinter"
+version = "2.0.9"
+description = "`dslinter` is a pylint plugin for linting data science and machine learning code. We plan to support the following Python libraries: TensorFlow, PyTorch, Scikit-Learn, Pandas, NumPy and SciPy."
+
+license = "GPL-3.0 License"
+
+authors = [
+    "Mark Haakman",
+    "Haiyin Zhang",
+    "Daoyao Wang",
+    "Chadha Degachi"
+]
+
+readme = "README.md"  # Markdown files are supported
+
+repository = "https://github.com/SERG-Delft/dslinter"
+homepage = "https://pypi.org/project/dslinter/"
+
+keywords = ["machine learning", "software engineering"]
+
+[tool.poetry.dependencies]
+python = "^3.7"  # Compatible python versions must be declared here
+toml = "^0.10"
+pylint = { version = "~2.12.2" }
+astroid = { version = "~2.9.3" }
+mypy = { version = "~0.931" }
+data-science-types = { version = "~0.2.23" }
+pyspark-stubs = {version = "~3.0.0.post3" }
+dslinter = {version = "~2.0.9" }
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+pytest-cov = "^2.4"
+
+# [tool.poetry.scripts]
+# my-script = "my_package:main"
