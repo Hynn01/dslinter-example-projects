@@ -25,5 +25,5 @@ jobs:
           pip install pylint        
 
       - name: Run pylint
-        run: pylint fast-neural-style-tensorflow
+        run: pylint .
  
