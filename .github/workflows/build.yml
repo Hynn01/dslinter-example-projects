@@ -22,9 +22,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          curl -sSL https://install.python-poetry.org | python3 -
-          poetry install          
+          pip install pylint        
 
       - name: Run pylint
-        run: poetry run pylint --fail-under=8
+        run: pylint llexnlp --fail-under=8
  
