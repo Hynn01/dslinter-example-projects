@@ -25,5 +25,6 @@ jobs:
           pip install pylint        
 
       - name: Run pylint
-        run: pylint .
+        run: pylint dslinter-example-projects
+
  
